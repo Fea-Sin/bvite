@@ -4,9 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {},
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "engines": {
+    "node": ">=16"
+  },
+  "keywords": ["Vite Vue3"],
+  "author": "feasin",
+  "license": "MIT",
   "devDependencies": {
     "vite": "^2.6.13"
   }
