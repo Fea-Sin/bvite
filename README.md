@@ -1,13 +1,23 @@
 # Vite Project
 
-- editor
+## 项目工程化
+
+- Editor
 
 - ESLint
 
-- ts
+- TS
 
-- prettier
+- Prettier
 
-- lint-staged
+- Lint-Staged
 
-- test Mocha
+- Husky
+
+- Mocha
+
+- Vite
+
+- Vue3
+
+- Pnpm
