@@ -3,6 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@typescript-eslint/eslint-plugin': ^5.3.1
   '@typescript-eslint/parser': ^5.3.1
+  '@vitejs/plugin-vue': ^1.9.4
   eslint: ^7.32.0
   eslint-config-standard: ^16.0.3
   eslint-plugin-import: ^2.25.2
@@ -18,6 +19,7 @@ specifiers:
 devDependencies:
   '@typescript-eslint/eslint-plugin': 5.3.1_4daca2483796bdceece3758b04dba2a1
   '@typescript-eslint/parser': 5.3.1_eslint@7.32.0+typescript@4.4.4
+  '@vitejs/plugin-vue': 1.9.4_vite@2.6.13
   eslint: 7.32.0
   eslint-config-standard: 16.0.3_c064783008e6437da98d184fd45815b6
   eslint-plugin-import: 2.25.3_eslint@7.32.0
@@ -221,6 +223,15 @@ packages:
     dependencies:
       '@typescript-eslint/types': 5.3.1
       eslint-visitor-keys: 3.1.0
+    dev: true
+
+  /@vitejs/plugin-vue/1.9.4_vite@2.6.13:
+    resolution: {integrity: sha512-0CZqaCoChriPTTtGkERy1LGPcYjGFpi2uYRhBPIkqJqUGV5JnJFhQAgh6oH9j5XZHfrRaisX8W0xSpO4T7S78A==}
+    engines: {node: '>=12.0.0'}
+    peerDependencies:
+      vite: ^2.5.10
+    dependencies:
+      vite: 2.6.13
     dev: true
 
   /acorn-jsx/5.3.2_acorn@7.4.1:
