@@ -1,7 +1,10 @@
 const Hello = "Bvite";
 
 const Bvite = {
-  version: "1.0.1-beta.1",
+  version: "1.0.1-beta.2",
 };
 
-export default Hello;
+export default {
+  Hello,
+  Bvite,
+};
