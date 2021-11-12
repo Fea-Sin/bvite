@@ -10,7 +10,6 @@
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx",
     "lint:fix": "eslint --fix . --ext .vue,.js,.ts,.jsx,.tsx",
     "prepare": "husky install",
-    "preinstall": "npx only-allow pnpm",
     "test": "echo \"Hello Bvite\" "
   },
   "engines": {
@@ -29,9 +28,13 @@
   "author": "feasin",
   "license": "MIT",
   "devDependencies": {
+    "@types/chai": "^4.2.22",
+    "@types/mocha": "^9.0.0",
+    "@types/sinon": "^10.0.6",
     "@typescript-eslint/eslint-plugin": "^5.3.1",
     "@typescript-eslint/parser": "^5.3.1",
     "@vitejs/plugin-vue": "^1.9.4",
+    "chai": "^4.3.4",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.25.2",
@@ -41,12 +44,14 @@
     "husky": "^7.0.4",
     "less": "^4.1.2",
     "lint-staged": "^11.2.6",
+    "mocha": "^9.1.3",
     "prettier": "^2.4.1",
+    "sinon": "^12.0.1",
     "typescript": "^4.4.4",
     "vite": "^2.6.13",
     "vue": "^3.2.21"
   },
   "peerDependencies": {
-    "vue": "^3.2.21"
+    "vue": "^3.2.x"
   }
 }

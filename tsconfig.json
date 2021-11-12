@@ -10,6 +10,7 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
+    "types": ["mocha", "chai", "sinon"],
     "lib": ["esnext", "dom"]
   },
   "include": [
@@ -18,5 +19,6 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "src/*.ts"
-  ]
+  ],
+  "exclude": ["node_modules"]
 }
