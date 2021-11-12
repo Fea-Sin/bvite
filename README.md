@@ -15,7 +15,7 @@
 
 - Husky            // ok
 
-- Mocha
+- Mocha            // -
 
 - Vite             // ok
 
@@ -24,3 +24,5 @@
 - Pnpm             // ok
 
 - Less             // ok
+
+- Jest
