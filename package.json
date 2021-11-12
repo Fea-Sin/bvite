@@ -10,6 +10,7 @@
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx",
     "lint:fix": "eslint --fix . --ext .vue,.js,.ts,.jsx,.tsx",
     "prepare": "husky install",
+    "preinstall": "npx -y only-allow pnpm",
     "test": "echo \"Hello Bvite\" "
   },
   "engines": {
@@ -40,6 +41,7 @@
     "husky": "^7.0.4",
     "less": "^4.1.2",
     "lint-staged": "^11.2.6",
+    "only-allow": "^1.0.0",
     "prettier": "^2.4.1",
     "typescript": "^4.4.4",
     "vite": "^2.6.13",
