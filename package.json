@@ -29,6 +29,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/chai": "^4.2.22",
+    "@types/jest": "26",
     "@types/sinon": "^10.0.6",
     "@typescript-eslint/eslint-plugin": "^5.3.1",
     "@typescript-eslint/parser": "^5.3.1",
@@ -42,14 +43,17 @@
     "eslint-plugin-promise": "^5.1.1",
     "eslint-plugin-vue": "^8.0.3",
     "husky": "^7.0.4",
+    "jest": "26",
     "less": "^4.1.2",
     "lint-staged": "^11.2.6",
     "prettier": "^2.4.1",
     "sinon": "^12.0.1",
+    "ts-jest": "26",
     "ts-node": "^10.4.0",
     "typescript": "^4.4.4",
     "vite": "^2.6.13",
-    "vue": "^3.2.21"
+    "vue": "^3.2.21",
+    "vue-jest": "^5.0.0-alpha.10"
   },
   "peerDependencies": {
     "vue": "^3.2.x"

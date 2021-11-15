@@ -15,8 +15,6 @@
 
 - Husky            // ok
 
-- Mocha            // -
-
 - Vite             // ok
 
 - Vue3             // ok
@@ -25,4 +23,4 @@
 
 - Less             // ok
 
-- Jest
+- Jest             // ok
