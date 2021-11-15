@@ -10,7 +10,7 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "types": ["mocha", "chai", "sinon"],
+    "types": ["mocha", "chai", "sinon", "@types/jest", "vite/client"],
     "lib": ["esnext", "dom"]
   },
   "include": [
@@ -18,7 +18,9 @@
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "src/*.ts"
+    "src/*.ts",
+    "play/src/*.ts",
+    "play/src/*.d.ts"
   ],
   "exclude": ["node_modules"]
 }
