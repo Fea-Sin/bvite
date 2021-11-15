@@ -10,7 +10,7 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "types": ["mocha", "chai", "sinon", "@types/jest", "vite/client"],
+    "types": ["chai", "sinon", "@types/jest", "vite/client"],
     "lib": ["esnext", "dom"]
   },
   "include": [

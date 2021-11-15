@@ -2,25 +2,24 @@
 
 ## 项目工程化
 
-<!-- prettier-ignore -->
-- Editor           // ok
+- [x] Editor
 
-- ESLint           // ok
+- [x] ESLint
 
-- TS               // ok
+- [x] TS
 
-- Prettier         // ok
+- [x] Prettier
 
-- Lint-Staged      // ok
+- [x] Lint-Staged
 
-- Husky            // ok
+- [x] Husky
 
-- Vite             // ok
+- [x] Vite
 
-- Vue3             // ok
+- [x] Vue3
 
-- Pnpm             // ok
+- [x] Pnpm
 
-- Less             // ok
+- [x] Less
 
-- Jest             // ok
+- [x] Jest
