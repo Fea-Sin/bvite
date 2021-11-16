@@ -30,6 +30,9 @@
   },
   "author": "feasin",
   "license": "MIT",
+  "dependencies": {
+    "@bvite/components": "workspace:*"
+  },
   "devDependencies": {
     "@types/chai": "^4.2.22",
     "@types/jest": "26",
@@ -59,6 +62,6 @@
     "vue-jest": "^5.0.0-alpha.10"
   },
   "peerDependencies": {
-    "vue": "^3.2.x"
+    "vue": "^3.2.0"
   }
 }

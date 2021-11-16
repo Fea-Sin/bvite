@@ -1,0 +1,13 @@
+{
+  "name": "@bvite/theme-chalk",
+  "version": "0.0.1",
+  "description": "Bvite component theme",
+  "main": "index.css",
+  "scripts": {},
+  "keywords": [
+    "vue-components",
+    "bvite ui"
+  ],
+  "author": "feasin",
+  "license": "MIT"
+}
