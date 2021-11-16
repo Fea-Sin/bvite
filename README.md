@@ -23,3 +23,5 @@
 - [x] Less
 
 - [x] Jest
+
+  - [x] Snapshots

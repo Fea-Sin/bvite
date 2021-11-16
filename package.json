@@ -1,7 +1,7 @@
 {
   "name": "bvite",
   "version": "1.0.1-beta.1",
-  "description": "Pre-Commit-Lint Vite Vue3 TS Pnpm Project",
+  "description": "Vite Vue3 TS Pnpm Component Project",
   "main": "index.js",
   "scripts": {
     "dev": "pnpm -C play dev",
@@ -17,7 +17,10 @@
   },
   "keywords": [
     "Vite",
-    "Vue3"
+    "Vue3",
+    "Component",
+    "Pnpm",
+    "TS"
   ],
   "lint-staged": {
     "*.{vue,js,ts,jsx,tsx}": [

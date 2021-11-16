@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Say Sanpshot renders correctly 1`] = `
+<div
+  class="sayBox"
+>
+  Hello Bvite
+</div>
+`;

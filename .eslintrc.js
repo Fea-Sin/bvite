@@ -6,6 +6,7 @@ module.exports = {
     es6: true,
     node: true,
     mocha: true,
+    jest: true,
   },
   extends: ["plugin:vue/essential", "standard"],
   globals: {
