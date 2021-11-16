@@ -1,0 +1,6 @@
+{
+  "name": "@bvite/utils",
+  "version": "1.0.0",
+  "description": "Bvite Utils",
+  "main": "index.js"
+}

@@ -31,7 +31,8 @@
   "author": "feasin",
   "license": "MIT",
   "dependencies": {
-    "@bvite/components": "workspace:*"
+    "@bvite/components": "workspace:*",
+    "@bvite/theme-chalk": "workspace:*"
   },
   "devDependencies": {
     "@types/chai": "^4.2.22",
