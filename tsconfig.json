@@ -20,7 +20,9 @@
     "src/**/*.vue",
     "src/*.ts",
     "play/src/*.ts",
-    "play/src/*.d.ts"
+    "play/src/*.d.ts",
+    "packages/**/*.ts",
+    "types/*.ts"
   ],
   "exclude": ["node_modules"]
 }

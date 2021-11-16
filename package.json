@@ -32,7 +32,8 @@
   "license": "MIT",
   "dependencies": {
     "@bvite/components": "workspace:*",
-    "@bvite/theme-chalk": "workspace:*"
+    "@bvite/theme-chalk": "workspace:*",
+    "@bvite/utils": "workspace:*"
   },
   "devDependencies": {
     "@types/chai": "^4.2.22",
