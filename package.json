@@ -36,6 +36,7 @@
     "@bvite/utils": "workspace:*"
   },
   "devDependencies": {
+    "@babel/core": "^7.16.0",
     "@types/chai": "^4.2.22",
     "@types/jest": "26",
     "@types/sinon": "^10.0.6",
