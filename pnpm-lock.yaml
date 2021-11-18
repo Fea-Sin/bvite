@@ -10,11 +10,13 @@ importers:
       '@bvite/utils': workspace:*
       '@types/chai': ^4.2.22
       '@types/jest': '26'
+      '@types/lodash': ^4.14.177
       '@types/sinon': ^10.0.6
       '@typescript-eslint/eslint-plugin': ^5.3.1
       '@typescript-eslint/parser': ^5.3.1
       '@vitejs/plugin-vue': ^1.9.4
       '@vue/test-utils': ^2.0.0-rc.16
+      babel-jest: '26'
       chai: ^4.3.4
       eslint: ^7.32.0
       eslint-config-standard: ^16.0.3
@@ -26,6 +28,7 @@ importers:
       jest: '26'
       less: ^4.1.2
       lint-staged: ^11.2.6
+      lodash: ^4.17.21
       prettier: ^2.4.1
       sinon: ^12.0.1
       ts-jest: '26'
@@ -38,15 +41,18 @@ importers:
       '@bvite/components': link:packages/components
       '@bvite/theme-chalk': link:packages/theme-chalk
       '@bvite/utils': link:packages/utils
+      lodash: 4.17.21
     devDependencies:
       '@babel/core': 7.16.0
       '@types/chai': 4.2.22
       '@types/jest': 26.0.24
+      '@types/lodash': 4.14.177
       '@types/sinon': 10.0.6
       '@typescript-eslint/eslint-plugin': 5.3.1_4daca2483796bdceece3758b04dba2a1
       '@typescript-eslint/parser': 5.3.1_eslint@7.32.0+typescript@4.4.4
       '@vitejs/plugin-vue': 1.9.4_vite@2.6.13
       '@vue/test-utils': 2.0.0-rc.16_vue@3.2.21
+      babel-jest: 26.6.3_@babel+core@7.16.0
       chai: 4.3.4
       eslint: 7.32.0
       eslint-config-standard: 16.0.3_c064783008e6437da98d184fd45815b6
@@ -65,7 +71,7 @@ importers:
       typescript: 4.4.4
       vite: 2.6.13_less@4.1.2
       vue: 3.2.21
-      vue-jest: 5.0.0-alpha.10_21606ea92e528e6a6ebd4610f934ec6c
+      vue-jest: 5.0.0-alpha.10_6c41db76e74b21426a556a0b67500e2f
 
   packages/components:
     specifiers: {}
@@ -860,6 +866,10 @@ packages:
 
   /@types/json5/0.0.29:
     resolution: {integrity: sha1-7ihweulOEdK4J7y+UnC86n8+ce4=}
+    dev: true
+
+  /@types/lodash/4.14.177:
+    resolution: {integrity: sha512-0fDwydE2clKe9MNfvXHBHF9WEahRuj+msTuQqOmAApNORFvhMYZKNGGJdCzuhheVjMps/ti0Ak/iJPACMaevvw==}
     dev: true
 
   /@types/node/16.11.7:
@@ -4035,7 +4045,6 @@ packages:
 
   /lodash/4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
-    dev: true
 
   /log-update/4.0.0:
     resolution: {integrity: sha512-9fkkDevMefjg0mmzWFBW8YkFP91OrizzkW3diF7CpG+S2EYdy4+TVfGwz1zeF8x7hCx1ovSPTOE9Ngib74qqUg==}
@@ -5588,7 +5597,7 @@ packages:
       - supports-color
     dev: true
 
-  /vue-jest/5.0.0-alpha.10_21606ea92e528e6a6ebd4610f934ec6c:
+  /vue-jest/5.0.0-alpha.10_6c41db76e74b21426a556a0b67500e2f:
     resolution: {integrity: sha512-iN62cTi4AL0UsgxEyVeJtHG6qXEv+8Ci2wX1vP3b/dAZvyBRmqy5aJHQrP6VCEuio+HgHQ1LAZ+ccM2pouBmlg==}
     peerDependencies:
       '@babel/core': 7.x
@@ -5605,6 +5614,7 @@ packages:
     dependencies:
       '@babel/core': 7.16.0
       '@babel/plugin-transform-modules-commonjs': 7.16.0_@babel+core@7.16.0
+      babel-jest: 26.6.3_@babel+core@7.16.0
       chalk: 2.4.2
       convert-source-map: 1.8.0
       extract-from-css: 0.4.4
