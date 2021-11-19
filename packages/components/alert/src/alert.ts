@@ -25,7 +25,6 @@ export const alertProps = buildProps({
     type: String,
     default: "",
   },
-  center: Boolean,
   effect: {
     type: String,
     values: ["light", "dark"],

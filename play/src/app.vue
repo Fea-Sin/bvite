@@ -14,9 +14,9 @@ export default defineComponent({
     <div class="logo">
       <img alt="Bvite Logo" src="./assets/logo.png" />
     </div>
-    <Say name="Bvite Vite Vue3 999" />
+    <Say name="Bvite Vite Vue3" />
     <div>
-      <vf-alert></vf-alert>
+      <vf-alert title="info alert" />
     </div>
   </div>
 </template>
