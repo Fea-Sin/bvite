@@ -25,7 +25,6 @@ export const alertProps = buildProps({
     type: String,
     default: "",
   },
-  showIcon: Boolean,
   center: Boolean,
   effect: {
     type: String,

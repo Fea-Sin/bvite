@@ -15,8 +15,8 @@ export const withInstall = <T, E extends Record<string, any>>(
     for (const [key, comp] of Object.entries(extra)) {
       (main as any)[key] = comp;
     }
-    return main as SFCWithInstall<T> & E;
   }
+  return main as SFCWithInstall<T> & E;
 };
 
 export const withInstallFunction = <T>(fn: T, name: string) => {

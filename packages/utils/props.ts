@@ -193,7 +193,7 @@ export const buildProps = <
           infer R,
           infer V,
           infer C,
-          // eslint-disable-next-line @typescript-eslint/no-unused-vars
+          // eslint-disable-next-line
           infer _D
         >
       ? BuildPropReturn<T, R, V, C, O[K]["default"]>
