@@ -1,0 +1,26 @@
+{
+  "name": "bvite-ui",
+  "version": "1.0.1",
+  "description": "Component Libaray for Vue3",
+  "scripts": {},
+  "keywords": [
+    "bvite-ui",
+    "Vue3 Component"
+  ],
+  "exports": {
+    ".": {
+      "require": "./lib/index.js",
+      "import": "./lib/index.mjs"
+    },
+    "./es": "./es/index.mjs",
+    "./lib": "./lib/index.js"
+  },
+  "main": "lib/index.js",
+  "module": "es/index.mjs",
+  "style": "dist/index.css",
+  "author": "",
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
+  "license": "MIT"
+}
