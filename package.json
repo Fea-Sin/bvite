@@ -1,6 +1,6 @@
 {
   "name": "bvite",
-  "version": "1.0.1-beta.1",
+  "version": "1.0.1-beta.2",
   "description": "Vite Vue3 TS Pnpm Component Project",
   "main": "index.js",
   "scripts": {

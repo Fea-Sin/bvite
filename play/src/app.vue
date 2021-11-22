@@ -1,45 +1,28 @@
-<script lang="ts">
-import { defineComponent } from "vue";
-import Say from "./components/Say.vue";
-
-export default defineComponent({
-  components: {
-    Say,
-  },
-});
-</script>
-
 <template>
-  <div class="con">
-    <div class="logo">
-      <img alt="Bvite Logo" src="./assets/logo.png" />
+  <div class="app">
+    <div id="nav">
+      <router-link class="item" to="/">Home</router-link>
+      <router-link class="item" to="/alert">Alert</router-link>
     </div>
-    <Say name="Bvite Vite Vue3" />
-    <div>
-      <vf-alert title="info alert" />
-    </div>
+    <router-view />
   </div>
 </template>
 
 <style lang="less" scoped>
-.box {
-  font-size: 20px;
-  color: blueviolet;
-}
-.boxa {
-  font-size: 20px;
-  color: green;
-}
-.con {
-  padding-top: 40px;
-}
-.logo {
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
+#nav {
+  padding: 30px;
 
-  img {
-    width: 100%;
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
+
+  .item {
+    padding: 0 8px;
   }
 }
 </style>
