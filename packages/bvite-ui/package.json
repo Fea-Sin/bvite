@@ -1,5 +1,5 @@
 {
-  "name": "bvite-ui",
+  "name": "@bvite/bvite-ui",
   "version": "1.0.1",
   "description": "Component Libaray for Vue3",
   "scripts": {},
