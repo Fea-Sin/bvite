@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "Bvite component theme",
   "main": "index.css",
-  "scripts": {},
+  "scripts": {
+    "clean": "rimraf dist"
+  },
   "keywords": [
     "vue-components",
     "bvite ui"
