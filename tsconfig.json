@@ -10,7 +10,7 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "types": ["chai", "sinon", "@types/jest", "vite/client"],
+    "types": ["chai", "sinon", "@types/jest", "vite/client", "@types/node"],
     "lib": ["esnext", "dom"]
   },
   "include": [
@@ -22,7 +22,8 @@
     "play/src/*.ts",
     "play/src/*.d.ts",
     "packages/**/*.ts",
-    "types/*.ts"
+    "types/*.ts",
+    "build/**/*.ts"
   ],
   "exclude": ["node_modules"]
 }
