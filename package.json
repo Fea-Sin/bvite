@@ -9,6 +9,9 @@
   "scripts": {
     "dev": "pnpm -C play dev",
     "build:play": "pnpm -C play build",
+    "clean:lib": "rimraf dist",
+    "clean": "pnpm run clean:lib && pnpm run clean -r --stream",
+    "build:theme": "pnpm -C packages/theme-chalk run build",
     "format": "prettier --write .",
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx",
     "lint:fix": "eslint --fix . --ext .vue,.js,.ts,.jsx,.tsx",
