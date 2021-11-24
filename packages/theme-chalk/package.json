@@ -5,7 +5,7 @@
   "main": "index.css",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "gulp"
+    "build": "gulp --require sucrase/register/ts"
   },
   "keywords": [
     "vue-components",
