@@ -1,8 +1,11 @@
 {
   "name": "bvite",
-  "version": "1.0.1-beta.2",
-  "description": "Vite Vue3 TS Pnpm Component Project",
-  "main": "index.js",
+  "private": true,
+  "packageManager": "pnpm@6.20.4",
+  "workspaces": [
+    "packages/*",
+    "play"
+  ],
   "scripts": {
     "dev": "pnpm -C play dev",
     "build:play": "pnpm -C play build",
@@ -40,6 +43,7 @@
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@types/chai": "^4.2.22",
+    "@types/gulp": "^4.0.9",
     "@types/jest": "26",
     "@types/lodash": "^4.14.177",
     "@types/node": "^16.11.9",

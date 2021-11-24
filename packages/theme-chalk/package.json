@@ -1,15 +1,21 @@
 {
   "name": "@bvite/theme-chalk",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "description": "Bvite component theme",
   "main": "index.css",
   "scripts": {
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+    "build": "gulp"
   },
   "keywords": [
     "vue-components",
     "bvite ui"
   ],
   "author": "feasin",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "gulp-cssmin": "^0.2.0",
+    "gulp-less": "^5.0.0",
+    "less-plugin-autoprefix": "^2.0.0"
+  }
 }
