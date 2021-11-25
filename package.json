@@ -73,6 +73,7 @@
     "lint-staged": "^11.2.6",
     "prettier": "^2.4.1",
     "rimraf": "^3.0.2",
+    "rollup": "^2.60.1",
     "sinon": "^12.0.1",
     "sucrase": "^3.20.3",
     "ts-jest": "26",
