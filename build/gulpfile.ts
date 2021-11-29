@@ -22,3 +22,25 @@ export const copyFiles = () => {
     copyTypings(),
   ]);
 };
+
+export const copyTypesDefinitions: TaskFunction = (done) => {
+  const src = `${buildOutput}/types/`;
+  const copy = (module: Module) =>
+    withTaskName(`copyTypes:${module}`, () =>
+      run(`rsync -a ${src} ${buildConfig[module].output.path}/`)
+    );
+
+  return parallel(copy("esm"), copy("cjs"))(done);
+};
+
+export const copyFullStyle = async () => {
+  await run(`mkdir -p ${bviteOutput}/dist`);
+  await run(
+    `cp ${bviteOutput}/theme-chalk/index.css ${bviteOutput}/dist/index.css`
+  );
+};
+
+export default series(
+  withTaskName("clean", () => run("pnpm run clean")),
+  parallel()
+);
