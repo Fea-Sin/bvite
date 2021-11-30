@@ -7,6 +7,9 @@ import { buildConfig } from "./build-info";
 import type { TaskFunction } from "gulp";
 import type { Module } from "./build-info";
 
+export * from "./modules";
+export * from "./full-bundle";
+
 const runTask = (name: string) =>
   withTaskName(name, () => run(`pnpm run build ${name}`));
 
@@ -42,5 +45,16 @@ export const copyFullStyle = async () => {
 
 export default series(
   withTaskName("clean", () => run("pnpm run clean")),
-  parallel()
+
+  parallel(
+    runTask("buildModules"),
+    runTask("buildFullBundle"),
+    series(
+      withTaskName("buildThemeChalk", () =>
+        run("pnpm run -C packages/theme-chalk build")
+      ),
+      copyFullStyle
+    )
+  ),
+  parallel(copyTypesDefinitions, copyFiles)
 );
