@@ -6,7 +6,7 @@ export const pkgRoot = resolve(proRoot, "packages");
 
 export const themeRoot = resolve(pkgRoot, "theme-chalk");
 
-export const bviteRoot = resolve(pkgRoot, "element-plus");
+export const bviteRoot = resolve(pkgRoot, "bvite-ui");
 
 // dist
 export const buildOutput = resolve(proRoot, "dist");
