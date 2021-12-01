@@ -56,5 +56,6 @@ export default series(
       copyFullStyle
     )
   ),
-  parallel(copyTypesDefinitions, copyFiles)
+  // parallel(copyTypesDefinitions, copyFiles)
+  parallel(copyFiles)
 );

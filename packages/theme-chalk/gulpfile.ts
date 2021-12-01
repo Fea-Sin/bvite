@@ -48,6 +48,18 @@ export function copyThemeChalk() {
   return src(`${distFolder}/**`).pipe(dest(bundleFolder));
 }
 
-export const build = parallel(series(clean, buildThemeChalk, copyThemeChalk));
+/**
+ * copy source file to packages
+ */
+export function copyThemeChalkSource() {
+  return src(path.resolve(__dirname, "src/**")).pipe(
+    dest(path.resolve(bundleFolder, "src"))
+  );
+}
+
+export const build = parallel(
+  copyThemeChalkSource,
+  series(clean, buildThemeChalk, copyThemeChalk)
+);
 
 export default build;
