@@ -47,7 +47,6 @@ export default series(
   withTaskName("clean", () => run("pnpm run clean")),
 
   parallel(
-    runTask("buildModules"),
     runTask("buildFullBundle"),
     series(
       withTaskName("buildThemeChalk", () =>
@@ -56,6 +55,5 @@ export default series(
       copyFullStyle
     )
   ),
-  // parallel(copyTypesDefinitions, copyFiles)
   parallel(copyFiles)
 );
