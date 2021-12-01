@@ -7,7 +7,6 @@ import esbuild from "rollup-plugin-esbuild";
 import replace from "@rollup/plugin-replace";
 import filesize from "rollup-plugin-filesize";
 import { parallel } from "gulp";
-import { BviteUiAlias } from "./plugins/bvite-ui-alias";
 import { bviteRoot, bviteOutput } from "./utils/paths";
 import { generateExternal, writeBundles } from "./utils/rollup";
 
@@ -17,7 +16,6 @@ export const buildFull = (minify: boolean) => async () => {
   const bundle = await rollup({
     input: path.resolve(bviteRoot, "index.ts"),
     plugins: [
-      await BviteUiAlias(),
       nodeResolve({
         extensions: [".mjs", ".js", ".json", ".ts"],
       }),
