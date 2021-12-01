@@ -8,6 +8,8 @@ export const themeRoot = resolve(pkgRoot, "theme-chalk");
 
 export const bviteRoot = resolve(pkgRoot, "bvite-ui");
 
+export const proTsconfig = resolve(proRoot, "tsconfig.json");
+
 // dist
 export const buildOutput = resolve(proRoot, "dist");
 
