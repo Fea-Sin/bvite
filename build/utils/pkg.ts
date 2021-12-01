@@ -1,13 +1,10 @@
 import findWorkspacePackages from "@pnpm/find-workspace-packages";
-import { buildConfig } from "../build-info";
 import { VF_PREFIX } from "./constants";
-import { pkgRoot, proPackage } from "./paths";
+import { pkgRoot, proRoot } from "./paths";
 
-import type { Module } from "../build-info";
 import type { ProjectManifest } from "@pnpm/types";
-import { stringify } from "querystring";
 
-export const getWorkspacePackages = () => findWorkspacePackages(proPackage);
+export const getWorkspacePackages = () => findWorkspacePackages(proRoot);
 
 /**
  * get package list (theme-chalk excluded)
