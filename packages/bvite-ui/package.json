@@ -2,10 +2,8 @@
   "name": "@bvite/bvite-ui",
   "version": "1.0.1-beta.2",
   "description": "Component Libaray for Vue3",
-  "scripts": {},
-  "keywords": [
-    "bvite-ui",
-    "Vue3 Component"
-  ],
+  "main": "index.ts",
+  "module": "index.ts",
+  "types": "index.d.ts",
   "license": "MIT"
 }
