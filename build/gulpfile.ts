@@ -44,16 +44,16 @@ export const copyFullStyle = async () => {
 };
 
 export default series(
-  // withTaskName("clean", () => run("pnpm run clean")),
+  withTaskName("clean", () => run("pnpm run clean")),
 
-  parallel(
-    runTask("buildFullBundle")
-    // series(
-    //   withTaskName("buildThemeChalk", () =>
-    //     run("pnpm run -C packages/theme-chalk build")
-    //   ),
-    //   copyFullStyle
-    // )
-  )
-  // parallel(copyFiles)
+  // parallel(
+  //   // runTask("buildFullBundle")
+  //   // series(
+  //   //   withTaskName("buildThemeChalk", () =>
+  //   //     run("pnpm run -C packages/theme-chalk build")
+  //   //   ),
+  //   //   copyFullStyle
+  //   // )
+  // ),
+  parallel(copyFiles)
 );
