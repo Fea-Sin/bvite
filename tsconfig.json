@@ -19,8 +19,8 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "src/*.ts",
-    "play/src/*.ts",
-    "play/src/*.d.ts",
+    "play/**/*.ts",
+    "play/**/*.d.ts",
     "packages/**/*.ts",
     "types/*.ts",
     "build/**/*.ts"
