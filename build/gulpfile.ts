@@ -2,7 +2,7 @@ import path from "path";
 import { series, parallel } from "gulp";
 import { run } from "./utils/process";
 import { withTaskName } from "./utils/gulp";
-import { buildOutput, bviteOutput, proPackage, proRoot } from "./utils/paths";
+import { buildOutput, bviteOutput, proRoot, bvitePackage } from "./utils/paths";
 import { buildConfig } from "./build-info";
 import type { TaskFunction } from "gulp";
 import type { Module } from "./build-info";
@@ -20,7 +20,7 @@ export const copyFiles = () => {
   };
 
   return Promise.all([
-    run(`cp ${proPackage} ${path.join(bviteOutput, "package.json")}`),
+    run(`cp ${bvitePackage} ${path.join(bviteOutput, "package.json")}`),
     run(`cp README.md ${bviteOutput}`),
     copyTypings(),
   ]);
@@ -46,14 +46,14 @@ export const copyFullStyle = async () => {
 export default series(
   withTaskName("clean", () => run("pnpm run clean")),
 
-  // parallel(
-  //   // runTask("buildFullBundle")
-  //   // series(
-  //   //   withTaskName("buildThemeChalk", () =>
-  //   //     run("pnpm run -C packages/theme-chalk build")
-  //   //   ),
-  //   //   copyFullStyle
-  //   // )
-  // ),
+  parallel(
+    // runTask("buildFullBundle")
+    series(
+      withTaskName("buildThemeChalk", () =>
+        run("pnpm run -C packages/theme-chalk build")
+      ),
+      copyFullStyle
+    )
+  ),
   parallel(copyFiles)
 );
