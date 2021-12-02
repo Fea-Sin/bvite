@@ -7,27 +7,5 @@
     "bvite-ui",
     "Vue3 Component"
   ],
-  "exports": {
-    ".": {
-      "require": "./lib/index.js",
-      "import": "./lib/index.mjs"
-    },
-    "./es": "./es/index.mjs",
-    "./lib": "./lib/index.js"
-  },
-  "main": "lib/index.js",
-  "module": "es/index.mjs",
-  "style": "dist/index.css",
-  "author": "",
-  "peerDependencies": {
-    "vue": "^3.2.0"
-  },
-  "sideEffects": [
-    "dist/*",
-    "theme-chalk/*.css",
-    "theme-chalk/src/*.less",
-    "es/components/*/src/**",
-    "lib/components/*/src/**"
-  ],
   "license": "MIT"
 }

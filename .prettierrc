@@ -3,6 +3,7 @@
   "jsxBracketSameLine": true,
   "bracketSpacing": true,
   "requirePragma": false,
+
   "overrides": [
     {
       "files": ".prettierrc",
