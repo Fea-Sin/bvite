@@ -2,7 +2,13 @@ import path from "path";
 import { series, parallel } from "gulp";
 import { run } from "./utils/process";
 import { withTaskName } from "./utils/gulp";
-import { buildOutput, bviteOutput, proRoot, bvitePackage } from "./utils/paths";
+import {
+  buildOutput,
+  bviteOutput,
+  proRoot,
+  bviteRoot,
+  vfuiPackage,
+} from "./utils/paths";
 import { buildConfig } from "./build-info";
 import type { TaskFunction } from "gulp";
 import type { Module } from "./build-info";
@@ -20,7 +26,7 @@ export const copyFiles = () => {
   };
 
   return Promise.all([
-    run(`cp ${bvitePackage} ${path.join(bviteOutput, "package.json")}`),
+    run(`cp ${vfuiPackage} ${path.join(bviteOutput, "package.json")}`),
     run(`cp README.md ${bviteOutput}`),
     copyTypings(),
   ]);
@@ -43,16 +49,28 @@ export const copyFullStyle = async () => {
   );
 };
 
+export const copyFullComponent = async () => {
+  await run(`mkdir -p ${bviteOutput}/dist`);
+  await run(`cp ${bviteRoot}/dist/vfui.cjs.js ${bviteOutput}/dist/`);
+  await run(`cp ${bviteRoot}/dist/vfui.es.js ${bviteOutput}/dist/`);
+  await run(`cp ${bviteRoot}/dist/vfui.umd.js ${bviteOutput}/dist/`);
+};
+
 export default series(
   withTaskName("clean", () => run("pnpm run clean")),
 
   parallel(
-    // runTask("buildFullBundle")
     series(
       withTaskName("buildThemeChalk", () =>
         run("pnpm run -C packages/theme-chalk build")
       ),
       copyFullStyle
+    ),
+    series(
+      withTaskName("buildComponent", () =>
+        run("pnpm run -C packages/bvite-ui build")
+      ),
+      copyFullComponent
     )
   ),
   parallel(copyFiles)

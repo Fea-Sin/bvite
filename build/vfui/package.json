@@ -2,8 +2,8 @@
   "name": "vfui",
   "version": "1.0.1-beta.2",
   "description": "vfui vue3 component library",
-  "main": "index.js",
-  "module": "",
+  "main": "./dist/vfui.cjs.js",
+  "module": "./dist/vfui.es.js",
   "keywords": [
     "vfui",
     "vue3",
@@ -11,11 +11,12 @@
   ],
   "author": "feasin",
   "files": [
-    "dist"
+    "dist",
+    "theme-chalk"
   ],
   ".": {
-    "import": "",
-    "require": ""
+    "import": "./dist/vfui.es.js",
+    "require": "./dist/vfui.cjs.js"
   },
-  "license": "ISC"
+  "license": "MIT"
 }

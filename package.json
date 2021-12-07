@@ -13,6 +13,7 @@
     "clean": "pnpm run clean:lib && pnpm run clean -r --stream",
     "build": "gulp --require sucrase/register/ts -f build/gulpfile.ts",
     "build:theme": "pnpm -C packages/theme-chalk run build",
+    "build:component": "pnpm -C packages/bvite-ui run build",
     "format": "prettier --write .",
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx",
     "lint:fix": "eslint --fix . --ext .vue,.js,.ts,.jsx,.tsx",

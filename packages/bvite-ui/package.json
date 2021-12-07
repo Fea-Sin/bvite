@@ -6,7 +6,8 @@
   "module": "index.ts",
   "types": "index.d.ts",
   "scripts": {
-    "build": "vite build"
+    "build": "vite build",
+    "clean": "rimraf dist"
   },
   "license": "MIT"
 }
