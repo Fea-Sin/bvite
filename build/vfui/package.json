@@ -1,5 +1,5 @@
 {
-  "name": "vfui",
+  "name": "@bvite/vfui",
   "version": "1.0.1-beta.2",
   "description": "vfui vue3 component library",
   "main": "./dist/vfui.cjs.js",
