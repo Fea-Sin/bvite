@@ -24,3 +24,6 @@ export const bvitePackage = resolve(bviteRoot, "package.json");
 
 // build package.json
 export const vfuiPackage = resolve(buildRoot, "vfui", "package.json");
+
+// tsconfig.json
+export const tsconfigRoot = resolve(proRoot, "tsconfig.json");
