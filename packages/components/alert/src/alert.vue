@@ -47,10 +47,3 @@ export default defineComponent({
   },
 });
 </script>
-<style lang="less" scoped>
-.box {
-  text-align: center;
-  color: green;
-  font-size: 30px;
-}
-</style>

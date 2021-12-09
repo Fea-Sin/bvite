@@ -1,4 +1,4 @@
-# Vite Project
+# Vue3 And Vite Component Library Project
 
 ## 项目工程化
 
@@ -49,7 +49,6 @@ project-root
   |-- build
   |     |-- vfui
   |     |    |-- package.json
-  |     |    |
 ```
 
 将`package.json`的`name`属性修改为你组件库名称即可，例如`my-awesome-ui`
