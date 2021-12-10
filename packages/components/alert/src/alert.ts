@@ -39,3 +39,5 @@ export const alertEmites = {
 };
 
 export type AlertEmites = typeof alertEmites;
+
+export declare class Alert {}
