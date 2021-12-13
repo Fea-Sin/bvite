@@ -1,8 +1,10 @@
 import findWorkspacePackages from "@pnpm/find-workspace-packages";
 import { VF_PREFIX } from "./constants";
 import { pkgRoot, proRoot } from "./paths";
+import { buildConfig } from "../build-info";
 
 import type { ProjectManifest } from "@pnpm/types";
+import type { Module } from "../build-info";
 
 export const getWorkspacePackages = () => findWorkspacePackages(proRoot);
 
@@ -40,4 +42,13 @@ export const excludeFiles = (files: string[]) => {
   return files.filter(
     (path) => !excludes.some((exclude) => path.includes(exclude))
   );
+};
+
+export const pathRewriter = (module: Module) => {
+  const config = buildConfig[module];
+
+  return (id: string) => {
+    id = id.replaceAll(`${VF_PREFIX}/`, `${config.bundle.path}/`);
+    return id;
+  };
 };

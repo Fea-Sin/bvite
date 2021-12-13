@@ -13,6 +13,7 @@ import { buildConfig } from "./build-info";
 import type { TaskFunction } from "gulp";
 import type { Module } from "./build-info";
 
+export * from "./types-definitions";
 export * from "./modules";
 export * from "./full-bundle";
 
@@ -71,7 +72,8 @@ export default series(
         run("pnpm run -C packages/bvite-ui build")
       ),
       copyFullComponent
-    )
+    ),
+    runTask("generateTypesDefinitions")
   ),
   parallel(copyFiles)
 );
