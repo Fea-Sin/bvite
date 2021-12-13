@@ -1,1 +1,1 @@
-// global types
+// GlobalComponent for Volar

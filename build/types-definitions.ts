@@ -5,7 +5,13 @@ import { Project } from "ts-morph";
 import glob from "fast-glob";
 import { bold } from "chalk";
 import { green, red, yellow } from "./utils/log";
-import { proRoot, buildOutput, pkgRoot, tsconfigRoot } from "./utils/paths";
+import {
+  proRoot,
+  buildOutput,
+  pkgRoot,
+  tsconfigRoot,
+  bviteOutput,
+} from "./utils/paths";
 import { excludeFiles, pathRewriter } from "./utils/pkg";
 import { run } from "./utils/process";
 import { VF_FOLDER } from "./utils/constants";
@@ -119,4 +125,7 @@ export const generateTypesDefinitions = async () => {
   });
   await run(`mv ${epFiles.join(" ")} ${outDir}`);
   await run(`rmdir ${path.resolve(outDir, VF_FOLDER)}`);
+
+  // cp types
+  // await run(`cp -r ${outDir} ${bviteOutput}`);
 };

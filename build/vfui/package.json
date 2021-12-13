@@ -1,9 +1,10 @@
 {
   "name": "@bvite/vfui",
-  "version": "1.0.1-beta.2",
+  "version": "1.0.2-beta.2",
   "description": "vfui vue3 component library",
   "main": "./dist/vfui.cjs.js",
   "module": "./dist/vfui.es.js",
+  "types": "./types/index.d.ts",
   "keywords": [
     "vfui",
     "vue3",

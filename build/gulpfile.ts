@@ -21,15 +21,15 @@ const runTask = (name: string) =>
   withTaskName(name, () => run(`pnpm run build ${name}`));
 
 export const copyFiles = () => {
-  const copyTypings = async () => {
-    const src = path.resolve(proRoot, "types", "global.d.ts");
-    await run(`cp ${src} ${bviteOutput}`);
-  };
+  // const copyTypings = async () => {
+  //   const src = path.resolve(proRoot, "types", "global.d.ts");
+  //   await run(`cp ${src} ${bviteOutput}`);
+  // };
 
   return Promise.all([
     run(`cp ${vfuiPackage} ${path.join(bviteOutput, "package.json")}`),
     run(`cp README.md ${bviteOutput}`),
-    copyTypings(),
+    // copyTypings(),
   ]);
 };
 
