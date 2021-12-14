@@ -17,9 +17,7 @@ export const buildOutput = resolve(proRoot, "dist");
 
 // dist/bvite-ui
 export const bviteOutput = resolve(buildOutput, "bvite-ui");
-
 export const proPackage = resolve(proRoot, "package.json");
-
 export const bvitePackage = resolve(bviteRoot, "package.json");
 
 // build package.json

@@ -26,5 +26,13 @@ module.exports = {
     "vue/multi-word-component-names": "off",
     indent: "off",
     "no-unused-vars": "off",
+    "@typescript-eslint/quotes": [
+      "error",
+      "double",
+      {
+        avoidEscape: true,
+        allowTemplateLiterals: true,
+      },
+    ],
   },
 };
