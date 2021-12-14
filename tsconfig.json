@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "target": "es6",
+    "module": "esnext",
+    "target": "esnext",
     "noImplicitAny": false,
     "removeComments": true,
     "useDefineForClassFields": true,
@@ -14,7 +14,6 @@
     "resolveJsonModule": true,
     "types": ["chai", "sinon", "@types/jest", "vite/client", "@types/node"],
     "lib": ["esnext", "dom"],
-    "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true

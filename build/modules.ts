@@ -6,12 +6,13 @@ import commonjs from "@rollup/plugin-commonjs";
 import esbuild from "rollup-plugin-esbuild";
 import filesize from "rollup-plugin-filesize";
 import glob from "fast-glob";
-import { bviteRoot, pkgRoot } from "./utils/paths";
+import { bviteRoot, pkgRoot, tsconfigRoot } from "./utils/paths";
 import { BviteUiAlias } from "./plugins/bvite-ui-alias";
 import { generateExternal, writeBundles } from "./utils/rollup";
 import { excludeFiles } from "./utils/pkg";
 import { reporter } from "./plugins/size-reporter";
 import { buildConfigEntries } from "./build-info";
+import typescript from "@rollup/plugin-typescript";
 
 import type { OutputOptions } from "rollup";
 
@@ -28,12 +29,11 @@ export const buildModules = async () => {
     input,
     plugins: [
       vue(),
+      typescript({
+        tsconfig: tsconfigRoot,
+      }),
       nodeResolve({
         extensions: [".mjs", ".js", ".json", ".ts"],
-      }),
-      esbuild({
-        sourceMap: true,
-        target: "es2018",
       }),
       commonjs(),
     ],
