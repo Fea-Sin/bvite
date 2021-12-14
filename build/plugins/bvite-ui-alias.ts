@@ -1,6 +1,5 @@
 import { VF_PKG, VF_PREFIX } from "../utils/constants";
 import { getDistPackages } from "../utils/pkg";
-
 import type { Plugin } from "rollup";
 
 export async function BviteUiAlias(): Promise<Plugin> {

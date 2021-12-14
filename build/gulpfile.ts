@@ -73,6 +73,7 @@ export default series(
       ),
       copyFullComponent
     ),
+    runTask("buildModules"),
     runTask("generateTypesDefinitions")
   ),
   parallel(copyFiles)
