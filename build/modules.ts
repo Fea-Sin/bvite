@@ -27,18 +27,15 @@ export const buildModules = async () => {
   const bundle = await rollup({
     input,
     plugins: [
-      await BviteUiAlias(),
-      css(),
-      vue({ target: "browser" }),
+      vue(),
       nodeResolve({
         extensions: [".mjs", ".js", ".json", ".ts"],
       }),
-      commonjs(),
       esbuild({
         sourceMap: true,
         target: "es2018",
       }),
-      filesize({ reporter }),
+      commonjs(),
     ],
     external: await generateExternal({ full: false }),
     treeshake: false,

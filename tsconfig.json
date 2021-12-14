@@ -1,17 +1,23 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "module": "commonjs",
+    "target": "es6",
+    "noImplicitAny": false,
+    "removeComments": true,
     "useDefineForClassFields": true,
-    "isolatedModules": true,
-    "module": "esnext",
     "moduleResolution": "node",
+    "esModuleInterop": true,
     "strict": true,
     "jsx": "preserve",
     "sourceMap": true,
+    "noLib": false,
     "resolveJsonModule": true,
-    "esModuleInterop": true,
     "types": ["chai", "sinon", "@types/jest", "vite/client", "@types/node"],
-    "lib": ["esnext", "dom"]
+    "lib": ["esnext", "dom"],
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
   },
   "include": [
     "src/**/*.ts",
