@@ -21,11 +21,6 @@ const runTask = (name: string) =>
   withTaskName(name, () => run(`pnpm run build ${name}`));
 
 export const copyFiles = () => {
-  // const copyTypings = async () => {
-  //   const src = path.resolve(proRoot, "types", "global.d.ts");
-  //   await run(`cp ${src} ${bviteOutput}`);
-  // };
-
   return Promise.all([
     run(`cp ${vfuiPackage} ${path.join(bviteOutput, "package.json")}`),
     run(`cp README.md ${bviteOutput}`),
@@ -61,6 +56,8 @@ export default series(
   withTaskName("clean", () => run("pnpm run clean")),
 
   parallel(
+    runTask("buildModules"),
+    runTask("generateTypesDefinitions"),
     series(
       withTaskName("buildThemeChalk", () =>
         run("pnpm run -C packages/theme-chalk build")
@@ -72,9 +69,7 @@ export default series(
         run("pnpm run -C packages/bvite-ui build")
       ),
       copyFullComponent
-    ),
-    runTask("buildModules"),
-    runTask("generateTypesDefinitions")
+    )
   ),
   parallel(copyFiles)
 );

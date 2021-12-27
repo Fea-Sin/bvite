@@ -1,24 +1,21 @@
 import { rollup } from "rollup";
 import vue from "rollup-plugin-vue";
-import css from "rollup-plugin-css-only";
-import { nodeResolve } from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import esbuild from "rollup-plugin-esbuild";
 import filesize from "rollup-plugin-filesize";
 import glob from "fast-glob";
-import { bviteRoot, pkgRoot, tsconfigRoot } from "./utils/paths";
+import { bviteRoot, pkgRoot } from "./utils/paths";
 import { BviteUiAlias } from "./plugins/bvite-ui-alias";
 import { generateExternal, writeBundles } from "./utils/rollup";
 import { excludeFiles } from "./utils/pkg";
 import { reporter } from "./plugins/size-reporter";
 import { buildConfigEntries } from "./build-info";
-import typescript from "@rollup/plugin-typescript";
 
 import type { OutputOptions } from "rollup";
 
 export const buildModules = async () => {
   const input = excludeFiles(
-    await glob("**/*.{js,ts,vue}", {
+    await glob("**/*.{ts,vue}", {
       cwd: pkgRoot,
       absolute: true,
       onlyFiles: true,
@@ -28,14 +25,14 @@ export const buildModules = async () => {
   const bundle = await rollup({
     input,
     plugins: [
-      vue(),
-      typescript({
-        tsconfig: tsconfigRoot,
-      }),
-      nodeResolve({
-        extensions: [".mjs", ".js", ".json", ".ts"],
-      }),
+      await BviteUiAlias(),
+      vue({ target: "browser" }),
       commonjs(),
+      esbuild({
+        sourceMap: true,
+        target: "es2018",
+      }),
+      filesize({ reporter }),
     ],
     external: await generateExternal({ full: false }),
     treeshake: false,
