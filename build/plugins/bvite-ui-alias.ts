@@ -20,7 +20,6 @@ export async function BviteUiAlias(): Promise<Plugin> {
 
       let updateId = id;
       for (const pkg of pkgs) {
-        console.log(pkg);
         if (id.startsWith(pkg.name)) {
           updateId = updateId.replace(pkg.name, pkg.dir);
         }
