@@ -1,10 +1,12 @@
 {
   "name": "@bvite/vfui",
-  "version": "1.0.2-beta.2",
+  "version": "1.0.2-beta.3",
   "description": "vfui vue3 component library",
-  "main": "./dist/vfui.cjs.js",
-  "module": "./dist/vfui.es.js",
+  "main": "lib/index.js",
+  "module": "es/index.mjs",
   "types": "./types/index.d.ts",
+  "style": "dist/index.css",
+  "unpkg": "dist/vfui.umd.js",
   "keywords": [
     "vfui",
     "vue3",
@@ -18,6 +20,18 @@
   ".": {
     "import": "./dist/vfui.es.js",
     "require": "./dist/vfui.cjs.js"
+  },
+  "sideEffects": [
+    "dist/*",
+    "theme-chalk/*.css",
+    "theme-chalk/src/*.less",
+    "es/components/*/style/*",
+    "lib/components/*/style/*",
+    "es/components/*/src/**",
+    "lib/components/*src/**"
+  ],
+  "peerDependencies": {
+    "vue": "^3.2.0"
   },
   "license": "MIT"
 }
