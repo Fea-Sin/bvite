@@ -7,7 +7,7 @@ pnpm update
 
 pnpm build
 
-cd dist/bvite-ui
+cd ../dist/bvite-ui
 npm publish --access publish
 cd -
 

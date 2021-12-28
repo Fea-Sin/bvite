@@ -1,6 +1,6 @@
 {
   "name": "@bvite/vfui",
-  "version": "1.0.2-beta.3",
+  "version": "1.0.2-beta.4",
   "description": "vfui vue3 component library",
   "main": "lib/index.js",
   "module": "es/index.mjs",
@@ -15,11 +15,16 @@
   "author": "feasin",
   "files": [
     "dist",
-    "theme-chalk"
+    "theme-chalk",
+    "es",
+    "lib"
   ],
   ".": {
-    "import": "./dist/vfui.es.js",
-    "require": "./dist/vfui.cjs.js"
+    "import": "./lib/index.js",
+    "require": "./es/index.mjs",
+    "./es": "./es/index.mjs",
+    "./lib": "./lib/index.js",
+    "./*": "./*"
   },
   "sideEffects": [
     "dist/*",
