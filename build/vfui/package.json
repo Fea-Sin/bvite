@@ -1,10 +1,10 @@
 {
   "name": "@bvite/vfui",
-  "version": "1.0.2-beta.4",
+  "version": "1.0.2-beta.5",
   "description": "vfui vue3 component library",
-  "main": "lib/index.js",
-  "module": "es/index.mjs",
-  "types": "./types/index.d.ts",
+  "main": "dist/vfui.cjs.js",
+  "module": "dist/vfui.es.js",
+  "types": "es/index.d.ts",
   "style": "dist/index.css",
   "unpkg": "dist/vfui.umd.js",
   "keywords": [
@@ -20,11 +20,10 @@
     "lib"
   ],
   ".": {
-    "import": "./lib/index.js",
-    "require": "./es/index.mjs",
+    "import": "./dist/vfui.es.js",
+    "require": "./dist/vfui.cjs.js",
     "./es": "./es/index.mjs",
-    "./lib": "./lib/index.js",
-    "./*": "./*"
+    "./lib": "./lib/index.js"
   },
   "sideEffects": [
     "dist/*",

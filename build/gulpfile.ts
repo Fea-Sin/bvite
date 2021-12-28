@@ -5,7 +5,6 @@ import { withTaskName } from "./utils/gulp";
 import {
   buildOutput,
   bviteOutput,
-  proRoot,
   bviteRoot,
   vfuiPackage,
 } from "./utils/paths";
@@ -24,7 +23,6 @@ export const copyFiles = () => {
   return Promise.all([
     run(`cp ${vfuiPackage} ${path.join(bviteOutput, "package.json")}`),
     run(`cp README.md ${bviteOutput}`),
-    // copyTypings(),
   ]);
 };
 
@@ -71,5 +69,5 @@ export default series(
       copyFullComponent
     )
   ),
-  parallel(copyFiles)
+  parallel(copyFiles, copyTypesDefinitions)
 );
