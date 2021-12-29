@@ -3,3 +3,4 @@ packages:
   - 'packages/**'
   - play
   - '!**/__tests__/**'
+  - docs

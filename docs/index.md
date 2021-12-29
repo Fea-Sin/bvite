@@ -8,7 +8,7 @@ Hello VFui
 
 ## 导航
 
-- [Alert]()
+- [Alert](./Alert/index.md)
 
 ## Blog
 
