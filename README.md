@@ -52,3 +52,35 @@ project-root
 ```
 
 将`package.json`的`name`属性修改为你组件库名称即可，例如`my-awesome-ui`
+
+## (dev mode)开发模式
+
+```bash
+npm run dev
+```
+
+## (docs mode)文档开发
+
+```bash
+npm run docs
+```
+
+## (build package)打包
+
+```bash
+npm run build
+```
+
+## (unit test)单元测试
+
+```bash
+pnpm run test -r
+```
+
+## (publish package)包发布
+
+```bash
+cd scripts
+
+./publish.sh
+```

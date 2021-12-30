@@ -2,8 +2,8 @@
 
 set -e
 
-pnpm install --frozen-lockfile
-pnpm update
+# pnpm install --frozen-lockfile
+# pnpm update
 
 pnpm build
 
