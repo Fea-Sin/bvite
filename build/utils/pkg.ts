@@ -48,7 +48,8 @@ export const pathRewriter = (module: Module) => {
   const config = buildConfig[module];
 
   return (id: string) => {
-    id = id.replaceAll(`${VF_PREFIX}/`, `${config.bundle.path}/`);
+    // id = id.replaceAll(`${VF_PREFIX}/`, `${config.bundle.path}/`);
+    id = id.replace(/@bvite/g, config.bundle.path);
     return id;
   };
 };
