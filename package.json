@@ -25,7 +25,7 @@
     "preinstall": "sucrase-node scripts/preinstall.ts"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=14"
   },
   "keywords": [
     "Vite",

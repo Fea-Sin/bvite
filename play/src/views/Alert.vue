@@ -1,7 +1,7 @@
 <template>
   <div class="con">
     <div class="box">
-      <vf-alert title="info alert" />
+      <vf-alert title="info alert" type="success" />
     </div>
   </div>
 </template>

@@ -129,7 +129,7 @@ importers:
     specifiers:
       vitepress: 0.20.1
     devDependencies:
-      vitepress: 0.20.1
+      vitepress: 0.20.1_less@4.1.2
 
   packages/bvite-ui:
     specifiers: {}
@@ -159,13 +159,13 @@ importers:
       vue-jest: ^5.0.0-alpha.10
       vue-router: '4'
     dependencies:
-      vue-router: 4.0.12_vue@3.2.23
+      vue-router: 4.0.12_vue@3.2.0
     devDependencies:
       '@types/jest': 26.0.24
       jest: 26.6.3_ts-node@10.4.0
       jest-serializer-vue: 2.0.2
-      ts-jest: 26.5.6_jest@26.6.3+typescript@4.5.2
-      vue-jest: 5.0.0-alpha.10_336e7b60f059033949963ee035d7766c
+      ts-jest: 26.5.6_jest@26.6.3+typescript@4.4.4
+      vue-jest: 5.0.0-alpha.10_327331e3de15076bfc00d6766487704c
 
 packages:
 
@@ -599,30 +599,15 @@ packages:
       '@babel/helper-plugin-utils': 7.16.5
     dev: true
 
-  /@babel/plugin-transform-modules-commonjs/7.16.0_@babel+core@7.16.0:
+  /@babel/plugin-transform-modules-commonjs/7.16.0_@babel+core@7.16.5:
     resolution: {integrity: sha512-Dzi+NWqyEotgzk/sb7kgQPJQf7AJkQBWsVp1N6JWc1lBVo0vkElUnGdr1PzUBmfsCCN5OOFya3RtpeHk15oLKQ==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
-      '@babel/core': 7.16.0
+      '@babel/core': 7.16.5
       '@babel/helper-module-transforms': 7.16.0
       '@babel/helper-plugin-utils': 7.14.5
-      '@babel/helper-simple-access': 7.16.0
-      babel-plugin-dynamic-import-node: 2.3.3
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /@babel/plugin-transform-modules-commonjs/7.16.5_@babel+core@7.16.5:
-    resolution: {integrity: sha512-ABhUkxvoQyqhCWyb8xXtfwqNMJD7tx+irIRnUh6lmyFud7Jln1WzONXKlax1fg/ey178EXbs4bSGNd6PngO+SQ==}
-    engines: {node: '>=6.9.0'}
-    peerDependencies:
-      '@babel/core': ^7.0.0-0
-    dependencies:
-      '@babel/core': 7.16.5
-      '@babel/helper-module-transforms': 7.16.5
-      '@babel/helper-plugin-utils': 7.16.5
       '@babel/helper-simple-access': 7.16.0
       babel-plugin-dynamic-import-node: 2.3.3
     transitivePeerDependencies:
@@ -9444,28 +9429,6 @@ packages:
       yargs-parser: 20.2.9
     dev: true
 
-  /ts-jest/26.5.6_jest@26.6.3+typescript@4.5.2:
-    resolution: {integrity: sha512-rua+rCP8DxpA8b4DQD/6X2HQS8Zy/xzViVYfEs2OQu68tkCuKLV0Md8pmX55+W24uRIyAsf/BajRfxOs+R2MKA==}
-    engines: {node: '>= 10'}
-    hasBin: true
-    peerDependencies:
-      jest: '>=26 <27'
-      typescript: '>=3.8 <5.0'
-    dependencies:
-      bs-logger: 0.2.6
-      buffer-from: 1.1.2
-      fast-json-stable-stringify: 2.1.0
-      jest: 26.6.3_ts-node@10.4.0
-      jest-util: 26.6.2
-      json5: 2.2.0
-      lodash: 4.17.21
-      make-error: 1.3.6
-      mkdirp: 1.0.4
-      semver: 7.3.5
-      typescript: 4.5.2
-      yargs-parser: 20.2.9
-    dev: true
-
   /ts-morph/12.1.0:
     resolution: {integrity: sha512-xsJt70NePtztxDZ99bXkOwoi3p82JDUiPa0pSgfvxDj87mb4zUwzv1LHOue3Lq7iJlh5fLzvWshOMDEUfKTVtg==}
     dependencies:
@@ -9856,30 +9819,6 @@ packages:
       replace-ext: 1.0.1
     dev: true
 
-  /vite/2.7.7:
-    resolution: {integrity: sha512-Nm4ingl//gMSj/p1aCBHuTc5Fd8W8Mwdci/HUvqCVq8xaJqF7z08S/LRq1M9kS0jRfJk1/f/CwUyQAr6YgsOLw==}
-    engines: {node: '>=12.2.0'}
-    hasBin: true
-    peerDependencies:
-      less: '*'
-      sass: '*'
-      stylus: '*'
-    peerDependenciesMeta:
-      less:
-        optional: true
-      sass:
-        optional: true
-      stylus:
-        optional: true
-    dependencies:
-      esbuild: 0.13.15
-      postcss: 8.4.5
-      resolve: 1.20.0
-      rollup: 2.62.0
-    optionalDependencies:
-      fsevents: 2.3.2
-    dev: true
-
   /vite/2.7.7_less@4.1.2:
     resolution: {integrity: sha512-Nm4ingl//gMSj/p1aCBHuTc5Fd8W8Mwdci/HUvqCVq8xaJqF7z08S/LRq1M9kS0jRfJk1/f/CwUyQAr6YgsOLw==}
     engines: {node: '>=12.2.0'}
@@ -9905,7 +9844,7 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress/0.20.1:
+  /vitepress/0.20.1_less@4.1.2:
     resolution: {integrity: sha512-2SOlvRv0bvPrQ3RPtp7Fh/G1MKidrsgAgYz18OvV+nIJb9iiYo0GUVHKN3OYswMh+vH78NyTeA1Q5v4YJ/H9LQ==}
     engines: {node: '>=12.0.0'}
     hasBin: true
@@ -9914,7 +9853,7 @@ packages:
       '@docsearch/js': 1.0.0-alpha.28
       '@vitejs/plugin-vue': 1.10.2_vite@2.7.7
       prismjs: 1.25.0
-      vite: 2.7.7
+      vite: 2.7.7_less@4.1.2
       vue: 3.2.26
     transitivePeerDependencies:
       - less
@@ -9958,7 +9897,7 @@ packages:
         optional: true
     dependencies:
       '@babel/core': 7.16.5
-      '@babel/plugin-transform-modules-commonjs': 7.16.5_@babel+core@7.16.5
+      '@babel/plugin-transform-modules-commonjs': 7.16.0_@babel+core@7.16.5
       babel-jest: 26.6.3_@babel+core@7.16.5
       chalk: 2.4.2
       convert-source-map: 1.8.0
@@ -9973,44 +9912,13 @@ packages:
       - supports-color
     dev: true
 
-  /vue-jest/5.0.0-alpha.10_336e7b60f059033949963ee035d7766c:
-    resolution: {integrity: sha512-iN62cTi4AL0UsgxEyVeJtHG6qXEv+8Ci2wX1vP3b/dAZvyBRmqy5aJHQrP6VCEuio+HgHQ1LAZ+ccM2pouBmlg==}
-    peerDependencies:
-      '@babel/core': 7.x
-      babel-jest: '>= 24 < 27'
-      jest: '>= 24 < 27 '
-      ts-jest: '>= 24 < 27 '
-      typescript: '>= 3.x'
-      vue: ^3.0.0-0
-    peerDependenciesMeta:
-      ts-jest:
-        optional: true
-      typescript:
-        optional: true
-    dependencies:
-      '@babel/core': 7.16.0
-      '@babel/plugin-transform-modules-commonjs': 7.16.0_@babel+core@7.16.0
-      babel-jest: 26.6.3_@babel+core@7.16.0
-      chalk: 2.4.2
-      convert-source-map: 1.8.0
-      extract-from-css: 0.4.4
-      jest: 26.6.3_ts-node@10.4.0
-      source-map: 0.5.6
-      ts-jest: 26.5.6_jest@26.6.3+typescript@4.5.2
-      tsconfig: 7.0.0
-      typescript: 4.5.2
-      vue: 3.2.23
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /vue-router/4.0.12_vue@3.2.23:
+  /vue-router/4.0.12_vue@3.2.0:
     resolution: {integrity: sha512-CPXvfqe+mZLB1kBWssssTiWg4EQERyqJZes7USiqfW9B5N2x+nHlnsM1D3b5CaJ6qgCvMmYJnz+G0iWjNCvXrg==}
     peerDependencies:
       vue: ^3.0.0
     dependencies:
       '@vue/devtools-api': 6.0.0-beta.20.1
-      vue: 3.2.23
+      vue: 3.2.0
     dev: false
 
   /vue/3.2.0:
