@@ -53,6 +53,12 @@ project-root
 
 将`package.json`的`name`属性修改为你组件库名称即可，例如`my-awesome-ui`
 
+## install package
+
+```
+pnpm install
+```
+
 ## (dev mode)开发模式
 
 ```bash
